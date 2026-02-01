@@ -39,40 +39,40 @@ test("reverseString(): return the expected value (3)", () => {
 });
 
 test("calculator(): add test", () => {
-  expect(calculator().add(13, 17).toBe(30));
+  expect(calculator().add(13, 17)).toBe(30);
 });
 
 test("calculator(): subtract test", () => {
-  expect(calculator().subtract(17, 13).toBe(4));
+  expect(calculator().subtract(17, 13)).toBe(4);
 });
 
 test("calculator(): divide test", () => {
-  expect(calculator().divide(5, 2).toBe(2.5));
+  expect(calculator().divide(5, 2)).toBe(2.5);
 });
 
 test("calculator(): multiply test", () => {
-  expect(calculator().multiply(31, 3).toBe(91));
+  expect(calculator().multiply(31, 3)).toBe(93);
 });
 
 test("caesarCipher(): from z to a", () => {
-  expect(caesarCipher("xyz", 3).toBe("abc"));
+  expect(caesarCipher("xyz", 3)).toBe("abc");
 });
 
 test("caesarCipher(): from a to z", () => {
-  expect(caesarCipher("abc", 25).toBe("zab"));
+  expect(caesarCipher("abc", 25)).toBe("zab");
 });
 
 test("caesarCipher(): case preservation", () => {
-  expect(caesarCipher("HeLLo", 3).toBe("KhOOr"));
+  expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
 });
 
 test("caesarCipher(): punctuation", () => {
-  expect(caesarCipher("Hello, World!", 3).toBe("Khoor, Zruog!"));
+  expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
 });
 
 test("analyzeArray():", () => {
-  expect(analyzeArray([1, 8, 3, 4, 2, 6]).average.toBe(4));
-  expect(analyzeArray([1, 8, 3, 4, 2, 6]).min.toBe(1));
-  expect(analyzeArray([1, 8, 3, 4, 2, 6]).max.toBe(8));
-  expect(analyzeArray([1, 8, 3, 4, 2, 6]).length.toBe(6));
+  expect(analyzeArray([1, 8, 3, 4, 2, 6]).average).toBe(4);
+  expect(analyzeArray([1, 8, 3, 4, 2, 6]).min).toBe(1);
+  expect(analyzeArray([1, 8, 3, 4, 2, 6]).max).toBe(8);
+  expect(analyzeArray([1, 8, 3, 4, 2, 6]).length).toBe(6);
 });
