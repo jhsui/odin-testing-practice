@@ -96,19 +96,21 @@ export function caesarCipher(string, factor) {
 }
 
 export function analyzeArray(arr) {
-  function compareNumeric(a, b) {
-    if (a > b) return 1;
-    if (a == b) return 0;
-    if (a < b) return -1;
-  }
+  //   function compareNumeric(a, b) {
+  //     if (a > b) return 1;
+  //     if (a === b) return 0;
+  //     if (a < b) return -1;
+  //   }
 
-  const sorted = arr.sort(compareNumeric);
+  //   const sorted = arr.sort(compareNumeric);
   return {
     average:
-      arr.reduce((accumulator, currentValue) => accumulator + currentValue) /
+      arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0) /
       arr.length,
-    min: sorted[0],
-    max: sorted[sorted.length - 1],
+    // min: sorted[0],
+    // max: sorted[sorted.length - 1],
+    min: Math.min(...arr),
+    max: Math.max(...arr),
     length: arr.length,
   };
 }
